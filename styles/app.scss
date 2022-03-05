@@ -1,6 +1,9 @@
 // RESET
 // Smooths out the rough edges across browsers
 @use './tools/normalize';
+@use 'node_modules/leaflet/dist/leaflet';
+@use './map';
+@use 'node_modules/leaflet-minimap/src/Control.MiniMap';
 
 // VARIABLES
 // Reusable settings

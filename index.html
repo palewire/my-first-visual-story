@@ -8,13 +8,24 @@
 {% script 'app' %}
 {% endblock scripts -%}
 
-{% block headline %}My headline will go here{% endblock headline %}
+{% block headline %}A South L.A. neighborhood grapples with a wave of violence{% endblock %}
 {% block byline %}By The My First Visual Story Class{% endblock byline %}
 {% block pubdate %}
   <time datetime="2022-03-05" pubdate>Mar. 5, 2022</time>
 {% endblock pubdate %}
 
 {% block content %}
+<section>
+  <p>The area around Harvard Park was the deadliest place for African Americans in Los Angeles County last year, according to <a href="http://homicide.latimes.com/">The Times’ Homicide Report</a>. So far this year, six people have been killed. Most of the victims were black men.</p>
+</section>
+
+<section>
+  <h3>One corner. Four killings</h3>
+  <p>The southwest corner of Harvard Park, at West 62nd Street and Harvard Boulevard, has been especially deadly. In the last year-and-a-half, four men have been killed there — while sitting in a car, trying to defuse an argument or walking home from the barber shop or the corner store.</p>
+  <div id="map"></div>
+</section>
+
+<!-- This is our charts section -->
 <section>
   <h3>A South L.A. neighborhood stands apart</h3>
   <p>
@@ -79,9 +90,10 @@
   </div>
 </section>
 
+<!-- This is our gallery section -->
 <section>
 <h3>Lives lost in Harvard Park</h3>
-<p>The {{ harvard_park_homicides|length }} homicides in Harvard Park since 2000 were primarily black and Latino males, but the list includes husbands, wives, fathers, mothers of all ages, and even some small children.</p>
+<p>The {{ harvard_park_homicides|length }} homicides in Harvard Park since 2000 were primarily black and Latino males. The list includes husbands, fathers, as well as wives, mothers and some small children.</p>
 <div class="row" data-masonry='{"percentPosition": true }'>
   {% for obj in harvard_park_homicides %}
   <div class="col-sm-6 col-lg-4 mb-4">
